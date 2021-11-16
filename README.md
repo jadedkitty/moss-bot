@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to NamVr Discord Bot Template 👋</h1>
+<h1 align="center">Moss Bot</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-v3.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/NamVr/DiscordBot-Template#readme" target="_blank">
@@ -12,9 +12,7 @@
   </a>
 </p>
 
-> An **open source** `discord.js` bot template which is based on official [discord.js guide](https://discordjs.guide/) to get started on making your very personal discord bot!
-
-### 🏠 [Homepage](https://github.com/NamVr/DiscordBot-Template#readme)
+### 🏠 [Homepage](https://github.com/jadedkitty/moss-bot#readme)
 
 ## Introduction
 
