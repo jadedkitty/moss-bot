@@ -1,148 +1,114 @@
-# 🤖 node-discord-bot-boilerplate
+<h1 align="center">Welcome to NamVr Discord Bot Template 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-v3.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/NamVr/DiscordBot-Template#readme" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://github.com/NamVr/DiscordBot-Template/graphs/commit-activity" target="_blank">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+  <a href="https://twitter.com/namanvrati" target="_blank">
+    <img alt="Twitter: namanvrati" src="https://img.shields.io/twitter/follow/namanvrati.svg?style=social" />
+  </a>
+</p>
 
-<!-- all-shields/header-badges:START -->
-[![v1.0.20210412](https://img.shields.io/badge/version-v1.0.20210412-lightgray.svg?style=flat&logo=)](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/CHANGELOG.md) [![](https://img.shields.io/npm/v/@ptkdev/node-discord-bot-boilerplate?color=CC3534&logo=npm)](https://www.npmjs.com/package/@ptkdev/node-discord-bot-boilerplate) [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat&logo=license)](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/blob/main/LICENSE.md) [![Language: TypeScript](https://img.shields.io/badge/language-typescript-blue.svg?style=flat&logo=typescript)](https://www.typescriptlang.org/) [![ECMAScript: 2019](https://img.shields.io/badge/ES-9-F7DF1E.svg?style=flat&logo=javascript)](https://github.com/tc39/ecma262) [![Discord Server](https://discordapp.com/api/guilds/383373985666301975/embed.png)](https://discord.ptkdev.io) 
-<!-- all-shields/header-badges:END -->
+> An **open source** `discord.js` bot template which is based on official [discord.js guide](https://discordjs.guide/) to get started on making your very personal discord bot!
 
-Create your discord bot with this friendly boilerplate. Use this repository as template for your bot
+### 🏠 [Homepage](https://github.com/NamVr/DiscordBot-Template#readme)
 
-This is a [github template](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/), you can fork it or [use as template](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/generate) for start new project with this repository as hello-world. I hate start new project with empty template, often i missing correct configuration, readme instruction or i need of samples of code. Use this repository as template solve this problem.
+## Introduction
 
-## 🎁 Support: Donate
+`NamVr` Discord Bot Template is an open source discord.js based bot template to get started on a new bot project. It is classic javascript template, not requiring any external dependencies unlike other famous frameworks. (This is not a framework!)
+You can scale any kind of bot project using this template. (single server based or multiple server based) It all depends on your creativity!
 
-> This project is **free**, **open source** and I try to provide excellent **free support**. Why donate? I work on this project several hours in my spare time and try to keep it up to date and working. **THANK YOU!**
+### Features:
 
-<!-- all-shields/sponsors-badges:START -->
-[![Donate Paypal](https://img.shields.io/badge/donate-paypal-005EA6.svg?style=for-the-badge&logo=paypal)](https://www.paypal.me/ptkdev) [![Donate Ko-Fi](https://img.shields.io/badge/donate-ko--fi-29abe0.svg?style=for-the-badge&logo=ko-fi)](https://ko-fi.com/ptkdev) [![Donate Github Sponsors](https://img.shields.io/badge/donate-sponsors-ea4aaa.svg?style=for-the-badge&logo=github)](https://github.com/sponsors/ptkdev) [![Donate Patreon](https://img.shields.io/badge/donate-patreon-F87668.svg?style=for-the-badge&logo=patreon)](https://www.patreon.com/join/ptkdev) [![Donate Bitcoin](https://img.shields.io/badge/BTC-35jQmZCy4nsxoMM3QPFrnZePDVhdKaHMRH-E38B29.svg?style=flat-square&logo=bitcoin)](https://ptk.dev/img/icons/menu/bitcoin_wallet.png) [![Donate Ethereum](https://img.shields.io/badge/ETH-0x8b8171661bEb032828e82baBb0B5B98Ba8fBEBFc-4E8EE9.svg?style=flat-square&logo=ethereum)](https://ptk.dev/img/icons/menu/ethereum_wallet.png) 
-<!-- all-shields/sponsors-badges:END -->
+This template comes in with many in-built useful and flexible features, such as
 
-## 📎 Menu
+#### • **Dynamic Command Handler:**
 
--   💡 [Features](#-features)
--   🚀 [How to use](#-usage-deploy)
--   📚 [Documentation](#-documentation)
--   🔨 [Developer Mode](#-developer-mode)
--   -   🏁 [Run Project](#-run-project)
--   -   💾 [Setup Project](#-setup-project)
--   -   🚀 [Deploy](#-deploy)
--   👨‍💻 [Contributing](#-contributing)
--   🐛 [Known Bugs](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/issues?q=is%3Aopen+is%3Aissue+label%3Abug)
--   🍻 Community:
-    -   <img src="https://raw.githubusercontent.com/ptkdev-boilerplate/node-discord-bot-boilerplate/main/.github/assets/social_telegram.png" height="18px"> Telegram ([🇬🇧 English](http://t.me/ptkdev_support) | [🇮🇹 Italian](http://t.me/ptkdev_support_italian))
-    -   <img src="https://raw.githubusercontent.com/ptkdev-boilerplate/node-discord-bot-boilerplate/main/.github/assets/social_discord.png" height="18px"> [Discord](http://discord.ptkdev.io) ([🇬🇧 English](https://discord.gg/jqUSGPKdmA) | [🇮🇹 Italian](https://discord.gg/SJFcbvG6RU) | [🇵🇱 Polish](https://discord.gg/25vg4VFhb7))
-    -   <img src="https://raw.githubusercontent.com/ptkdev-boilerplate/node-discord-bot-boilerplate/main/.github/assets/social_twitter.png" height="18px"> [Twitter](http://twitter.com/ptkdevio)
+- My template comes in with a dynamic command handler! Using the command handler, you don't need to indulge in main bot files to create your very own command!
+- You can simply make command groups (categorized as folders) in the [commands](https://github.com/NamVr/DiscordBot-Template/tree/master/commands/) folder.
+- Your JavaScript commands goes inside respective category folders. A sample command is provided as [ping](https://github.com/NamVr/DiscordBot-Template/blob/master/commands/misc/ping.js) command. You can use the same skeleton for all commands you want!
 
-## 💡 Features
+#### • **Dynamic Event Handler:**
 
--   [✔️] Easy to use
--   [✔️] MIT License
--   [✔️] Make discord bot with node
--   [✔️] Friendly boilerplate + Github templates
--   [✔️] Typescript + TSPaths preconfigured
--   [✔️] Userfriendly folders tree
--   [✔️] Prettiers and ESLint preconfigured
--   [✔️] all-contributors-cli and all-shields-cli preconfigured
--   [✔️] JEST Test preconfigured
--   [✔️] Full async code
--   [✔️] Github and Vscode dotfiles preconfigured
--   [✔️] Translations: 🇬🇧 🇮🇹 🇵🇱 (Help me ❤️)
+- All events goes inside the [events](https://github.com/NamVr/DiscordBot-Template/blob/master/events/) folder. You don't need to use `client.on()` in the main `bot.js` file to handle events.
+- Using simple skeleton code for events, you can make any amount of events in the events folder using the event handler.
 
-## 🚀 Usage: Deploy
+#### • **Dynamic Trigger Handler:**
 
-1. Clone this repository or download [nightly](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/archive/nightly.zip), [beta](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/archive/beta.zip) or [stable](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/archive/main.zip).
-2. Create new application on [discord developer page](https://discord.com/developers/applications):
+- Triggers occur when a specific "phrase" is said in a message content. For example, if you want your bot to react with :heart: when someone say `welcome` in their message, you can do that with this trigger handler!
+- Trigger Handler also has the same skeleton structure as of command handler. The trigger handler is associated with the [triggers](https://github.com/NamVr/DiscordBot-Template/tree/master/triggers/) folder. There are trigger categories, like [reactions](https://github.com/NamVr/DiscordBot-Template/tree/master/triggers/reactions) folder, in the trigger folder.
+- A sample trigger command is given in the [`hello.js`](https://github.com/NamVr/DiscordBot-Template/tree/master/triggers/reactions/hello.js) trigger file.
 
--   A. Click "Bot" on left menu, generate new bot and save token for step 3
--   B. Click "oAuth2" on left menu, go to bottom and set `scope` as `BOT` and check all write permissions. Copy generated link and invite bot to your server.
+#### • **[NEW] Dynamic Slash Command Handler:**
 
-3. Run with correct values: `npm run init:token --token asdfghjkl`
-4. Run `npm run init`
-5. Run `npm run start-pm2`
-6. Write `/start` on discord bot.
+- My template comes with a dynamic slash command handler with very easy to customize and make slash commands.
+- The commands, in the slashCommands folder, receive an [`CommandInteraction`](https://discord.js.org/#/docs/main/stable/class/CommandInteraction) object. You can see the [documentation of discord.js](https://discord.js.org/#/docs/main/stable/class/CommandInteraction) for all the properties and methods available.
+- **IMPORTANT:** In the template, we are sending the slash commands to discord to be registered only to 1 guild. That is because their are 2 types of slash commands, guild and global. Guild commands are restricted to 1 guild but whenever you update them, they take effect immediately, whereas global commands take upto 1 hour to take effect. So use guild commands in development and global commands for production.
 
-## 🔨 Developer Mode
+#### • **[NEW] Dynamic Buttons Interaction Handler:**
 
-#### 🏁 Run Project
+- This template comes with a dynamic button interaction handler to receive and process button interactions.
+- Buttons can be classified in two category folders.
 
-1. Clone this repository or download [nightly](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/archive/nightly.zip), [beta](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/archive/beta.zip) or [stable](https://github.com/ptkdev-boilerplate/node-discord-bot-boilerplate/archive/main.zip).
-2. Create new application on [discord developer page](https://discord.com/developers/applications):
+#### • **[NEW] Dynamic Context Menu Handler:**
 
--   A. Click "Bot" on left menu, generate new bot and save token for step 3
--   B. Click "oAuth2" on left menu, go to bottom and set `scope` as `BOT` and check all write permissions. Copy generated link and invite bot to your server.
+- All new addition to discord API is context menus! You can right click a user or message -> Apps to find these options!
+- This template will register all your context menu options and dynamically interact with them! Worth a try.
 
-3. Run with correct values: `npm run init:token --token asdfghjkl`
-4. Run `npm run init`
-5. Run `npm run dev`
-6. Write `/start` on discord bot.
+#### • **Highly Customizable:**
 
-#### 💾 Setup Project
+Using the template is so easy and fun, you would know. As the template does not rely on any external dependencies and written in javascript, it is highly customizable to any extend. There's no end to your creativity!
 
-If you want replace all strings (example: package name, author, urls, etc...) in markdown file, source files and others files of this project you need edit `setup.json` with correct values and run `npm run setup`.
+#### • **Open source and self-hosted:**
 
-#### 🚀 Deploy
+> It's yours, you have full control.
 
-Deploy bot to your server and:
+## Install
 
-1. Run with correct values: `npm run init:token --token asdfghjkl`
-2. Run init `npm run init`
-3. Generate release `npm run release`
-4. Start bot `npm run start-pm2`
+```sh
+npm install
+```
 
-## 📚 Documentation
+## Run tests
 
-Run `npm run docs`
+```sh
+npm run test
+```
 
-## 👑 Backers and Sponsors
+## Support & Documentation
 
-Thanks to all our backers! 🙏 Donate 3$ or more on [paypal](https://www.paypal.me/ptkdev), [ko-fi](https://ko-fi.com/ptkdev), [github](https://github.com/sponsors/ptkdev) or [patreon](https://www.patreon.com/join/ptkdev) and send me [email](mailto:support@ptkdev.io) with your avatar and url.
+I'm working to make it more professional and easy to use for everyone. There will be a documentation out very soon.
 
-[![](https://api.ptkdev.io/backers/sponsor1.png?)](https://api.ptkdev.io/backers/sponsor1.html) [![](https://api.ptkdev.io/backers/sponsor2.png?)](https://api.ptkdev.io/backers/sponsor2.html) [![](https://api.ptkdev.io/backers/sponsor-kofi1.png?)](https://api.ptkdev.io/backers/sponsor-kofi1.html) [![](https://api.ptkdev.io/backers/sponsor-kofi2.png?)](https://api.ptkdev.io/backers/sponsor-kofi2.html) [![](https://api.ptkdev.io/backers/sponsor-kofi3.png?)](https://api.ptkdev.io/backers/sponsor-kofi3.html) [![](https://api.ptkdev.io/backers/sponsor3.png?)](https://api.ptkdev.io/backers/sponsor3.html) [![](https://api.ptkdev.io/backers/sponsor4.png?)](https://api.ptkdev.io/backers/sponsor4.html) [![](https://api.ptkdev.io/backers/sponsor5.png?)](https://api.ptkdev.io/backers/sponsor5.html) [![](https://api.ptkdev.io/backers/sponsor6.png?)](https://api.ptkdev.io/backers/sponsor6.html) [![](https://api.ptkdev.io/backers/sponsor7.png?)](https://api.ptkdev.io/backers/sponsor7.html) [![](https://api.ptkdev.io/backers/sponsor8.png?)](https://api.ptkdev.io/backers/sponsor8.html) [![](https://api.ptkdev.io/backers/sponsor9.png?)](https://api.ptkdev.io/backers/sponsor9.html) [![](https://api.ptkdev.io/backers/sponsor10.png?)](https://api.ptkdev.io/backers/sponsor10.html) [![](https://api.ptkdev.io/backers/sponsor11.png?)](https://api.ptkdev.io/backers/sponsor11.html) [![](https://api.ptkdev.io/backers/sponsor12.png?)](https://api.ptkdev.io/backers/sponsor12.html) [![](https://api.ptkdev.io/backers/sponsor13.png?)](https://api.ptkdev.io/backers/sponsor13.html) [![](https://api.ptkdev.io/backers/sponsor14.png?)](https://api.ptkdev.io/backers/sponsor14.html) [![](https://api.ptkdev.io/backers/sponsor15.png?)](https://api.ptkdev.io/backers/sponsor15.html) [![](https://api.ptkdev.io/backers/backer1.png?)](https://api.ptkdev.io/backers/backer1.html) [![](https://api.ptkdev.io/backers/backer2.png?)](https://api.ptkdev.io/backers/backer2.html) [![](https://api.ptkdev.io/backers/backer3.png?)](https://api.ptkdev.io/backers/backer3.html) [![](https://api.ptkdev.io/backers/backer4.png?)](https://api.ptkdev.io/backers/backer4.html) [![](https://api.ptkdev.io/backers/backer5.png?)](https://api.ptkdev.io/backers/backer5.html) [![](https://api.ptkdev.io/backers/backer6.png?)](https://api.ptkdev.io/backers/backer6.html) [![](https://api.ptkdev.io/backers/backer7.png?)](https://api.ptkdev.io/backers/backer7.html) [![](https://api.ptkdev.io/backers/backer8.png?)](https://api.ptkdev.io/backers/backer8.html) [![](https://api.ptkdev.io/backers/backer9.png?)](https://api.ptkdev.io/backers/backer9.html) [![](https://api.ptkdev.io/backers/backer10.png?)](https://api.ptkdev.io/backers/backer10.html) [![](https://api.ptkdev.io/backers/backer11.png?)](https://api.ptkdev.io/backers/backer11.html) [![](https://api.ptkdev.io/backers/backer12.png?)](https://api.ptkdev.io/backers/backer12.html) [![](https://api.ptkdev.io/backers/backer13.png?)](https://api.ptkdev.io/backers/backer13.html) [![](https://api.ptkdev.io/backers/backer14.png?)](https://api.ptkdev.io/backers/backer14.html) [![](https://api.ptkdev.io/backers/backer15.png?)](https://api.ptkdev.io/backers/backer15.html) [![](https://api.ptkdev.io/backers/backer16.png?)](https://api.ptkdev.io/backers/backer16.html) [![](https://api.ptkdev.io/backers/backer17.png?)](https://api.ptkdev.io/backers/backer17.html) [![](https://api.ptkdev.io/backers/backer18.png?)](https://api.ptkdev.io/backers/backer18.html) [![](https://api.ptkdev.io/backers/backer19.png?)](https://api.ptkdev.io/backers/backer19.html) [![](https://api.ptkdev.io/backers/backer20.png?)](https://api.ptkdev.io/backers/backer20.html) [![](https://api.ptkdev.io/backers/backer21.png?)](https://api.ptkdev.io/backers/backer21.html) [![](https://api.ptkdev.io/backers/backer22.png?)](https://api.ptkdev.io/backers/backer22.html) [![](https://api.ptkdev.io/backers/backer23.png?)](https://api.ptkdev.io/backers/backer23.html) [![](https://api.ptkdev.io/backers/backer24.png?)](https://api.ptkdev.io/backers/backer24.html) [![](https://api.ptkdev.io/backers/backer25.png?)](https://api.ptkdev.io/backers/backer25.html) [![](https://api.ptkdev.io/backers/backer26.png?)](https://api.ptkdev.io/backers/backer26.html) [![](https://api.ptkdev.io/backers/backer27.png?)](https://api.ptkdev.io/backers/backer27.html) [![](https://api.ptkdev.io/backers/backer28.png?)](https://api.ptkdev.io/backers/backer28.html) [![](https://api.ptkdev.io/backers/backer29.png?)](https://api.ptkdev.io/backers/backer29.html)
+## Authors
 
-## 👨‍💻 Contributing
+👤 **Naman Vrati**
 
-I ❤️ contributions! I will happily accept your pull request! Translations, grammatical corrections (GrammarNazi you are welcome! Yes my English is bad, sorry), etc... Do not be afraid, if the code is not perfect we will work together 👯 and remember to insert your name in `.all-contributorsrc` and `package.json` file.
+- Website: https://namanvrati.cf/
+- Twitter: [@namanvrati](https://twitter.com/namanvrati)
+- Github: [@NamVr](https://github.com/NamVr)
+- LinkedIn: [@namanvrati](https://linkedin.com/in/namanvrati)
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+👤 **Krish Garg**
 
-<!-- ALL-CONTRIBUTORS-LIST:START -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://ptk.dev"><img src="https://avatars1.githubusercontent.com/u/442844?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Patryk Rzucidło</b></sub></a><br /><a href="https://github.com/ptkdev/ptkdev-boilerplate/node-discord-bot-boilerplate/commits?author=ptkdev" title="Code">💻</a> <a href="#translation-ptkdev" title="Translation">🌍</a> <a href="https://github.com/ptkdev/ptkdev-boilerplate/node-discord-bot-boilerplate/commits?author=ptkdev" title="Documentation">📖</a> <a href="https://github.com/ptkdev/ptkdev-boilerplate/node-discord-bot-boilerplate/issues?q=author%3Aptkdev" title="Bug reports">🐛</a></td>
-    <td align="center"><img src="https://avatars1.githubusercontent.com/u/50172746?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alì Shadman</b></sub><br /><a href="https://github.com/ptkdev/ptkdev-boilerplate/node-discord-bot-boilerplate/commits?author=AliShadman95" title="Code">💻</a> <a href="#translation-AliShadman95" title="Translation">🌍</a> <a href="https://github.com/ptkdev/ptkdev-boilerplate/node-discord-bot-boilerplate/commits?author=AliShadman95" title="Documentation">📖</a> <a href="https://github.com/ptkdev/ptkdev-boilerplate/node-discord-bot-boilerplate/issues?q=author%3AAliShadman95" title="Bug reports">🐛</a></td>
-  </tr>
-</table>
+- Website: https://krishgarg.ga/
+- Twitter: [@KrishGa95586696](https://twitter.com/KrishGa95586696)
+- Github: [@KrishGarg](https://github.com/KrishGarg)
 
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
+## 🤝 Contributing
 
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/NamVr/DiscordBot-Template/issues). You can also take a look at the [contributing guide](https://github.com/NamVr/DiscordBot-Template/blob/master/CONTRIBUTING.md).
 
-> 💰 In the future, if the donations allow it, I would like to share some of the success with those who helped me the most. For me open source is share of code, share development knowledges and share donations!
+## Show your support
 
-## 🦄 Other Projects
+Give a ⭐️ if this project helped you! Star-ring the project gives me encouragement to continue it.
+You can also [sponsor](https://ko-fi.com/namanvrati) the project and get listed as a contributer! Thanks a lot.
 
-<!-- all-shields/projects-badges1:START -->
-[![](https://img.shields.io/badge/💻%20My-Portfolio-3498db.svg?style=flat&logo=)](https://ptk.dev/) 
-<!-- all-shields/projects-badges1:END -->
+## 📝 License
 
-<!-- all-shields/projects-badges2:START -->
-[![](https://img.shields.io/badge/🦒%20Tools-Node%20Logger-9b59b6.svg?style=flat&logo=)](https://github.com/ptkdev/ptkdev-logger) [![](https://img.shields.io/badge/🦌%20Tools-All%20Shields%20CLI-9b59b6.svg?style=flat&logo=)](https://github.com/ptkdev/all-shields-cli) [![](https://img.shields.io/badge/🖥️%20Tools-Aspect%20Ratio%2021:9-9b59b6.svg?style=flat&logo=)](https://github.com/ptkdev/chrome-extension-aspectratio219) [![](https://img.shields.io/badge/🛡%20Tools-Badges:%20Available%20on-9b59b6.svg?style=flat&logo=)](https://availableon.badge.ptkdev.io/) [![](https://img.shields.io/badge/🐾%20Tools-JSON%20Token%20Replace-9b59b6.svg?style=flat&logo=)](https://github.com/ptkdev/json-token-replace) [![](https://img.shields.io/badge/🐍%20Tools-ESLint:%20snakecasejs-9b59b6.svg?style=flat&logo=)](https://github.com/ptkdev/eslint-plugin-snakecasejs) 
-<!-- all-shields/projects-badges2:END -->
+Copyright © 2021 [Naman Vrati](https://github.com/NamVr).<br />
+This project is [ISC](https://github.com/NamVr/DiscordBot-Template/blob/master/LICENSE) licensed.
 
-<!-- all-shields/projects-badges3:START -->
-[![](https://img.shields.io/badge/📸%20WebComponent-Instagram%20Widget-e74c3c.svg?style=flat&logo=)](https://github.com/ptkdev-components/webcomponent-instagram-widget) [![](https://img.shields.io/badge/👑%20WebComponent-My%20Patreon%20Box-e74c3c.svg?style=flat&logo=)](https://github.com/ptkdev-components/webcomponent-patreon-box) [![](https://img.shields.io/badge/🏞%20WebComponent-Carousel%20Slideshow-e74c3c.svg?style=flat&logo=)](https://github.com/ptkdev-components/webcomponent-carousel-slideshow) 
-<!-- all-shields/projects-badges3:END -->
-
-<!-- all-shields/projects-badges4:START -->
-[![](https://img.shields.io/badge/🎨%20Themes-VSCode-f1c40f.svg?style=flat&logo=)](https://github.com/ptkdev/vscode-theme-dark-blood) [![](https://img.shields.io/badge/📚%20Bot-GameBookChat-34495e.svg?style=flat&logo=)](https://t.me/gamebookchatbot) [![](https://img.shields.io/badge/👔%20Boilerplate-Svelte-f368e0.svg?style=flat&logo=)](https://github.com/ptkdev-boilerplate?q=svelte) [![](https://img.shields.io/badge/👔%20Boilerplate-WebComponents-f368e0.svg?style=flat&logo=)](https://github.com/ptkdev-boilerplate?q=webcomponent) [![](https://img.shields.io/badge/👔%20Boilerplate-BOT-f368e0.svg?style=flat&logo=)](https://github.com/ptkdev-boilerplate?q=bot) [![](https://img.shields.io/badge/👔%20Boilerplate-Node-f368e0.svg?style=flat&logo=)](https://github.com/ptkdev-boilerplate?q=node) [![](https://img.shields.io/badge/💅%20App-Me%20in%20Gifs-2ecc71.svg?style=flat&logo=)](https://meingifs.pics/) [![](https://img.shields.io/badge/📱%20App-Stickers-2ecc71.svg?style=flat&logo=)](https://github.com/ptkdev/ptkdev-stickers#-install-free) 
-<!-- all-shields/projects-badges4:END -->
-
-## 💫 License
-
--   Code and Contributions have **MIT License**
--   Images and logos have **CC BY-NC 4.0 License**
--   Documentations and Translations have **CC BY 4.0 License**
-
-###### Copyleft (c) 2021 [Patryk Rzucidło](https://ptk.dev) ([@PTKDev](https://twitter.com/ptkdev)) <[support@ptkdev.io](mailto:support@ptkdev.io)>
+---
