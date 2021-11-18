@@ -10,10 +10,10 @@ module.exports = {
   args: true,
 
   /** You need to uncomment below properties if you need them. */
-  //description: 'Adds pronouns for user',
+  description: 'Adds pronouns for user',
   usage: "add/remove <pronouns>",
   //permissions: 'SEND_MESSAGES',
-  //guildOnly: true,
+  guildOnly: true,
 
   /**
    * @description Executes when the command is called by command handler.

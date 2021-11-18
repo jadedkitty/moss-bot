@@ -8,10 +8,10 @@ module.exports = {
   name: "hug",
 
   /** You need to uncomment below properties if you need them. */
-  //description: 'Hug a user',
-  //usage: 'put usage here',
+  description: 'Hug a user',
+  usage: '<user>',
   //permissions: 'SEND_MESSAGES',
-  //guildOnly: true,
+  guildOnly: true,
 
   /**
    * @description Executes when the command is called by command handler.
