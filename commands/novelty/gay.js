@@ -24,7 +24,7 @@ module.exports = {
     min = Math.ceil(1);
     max = Math.floor(100);
     var randomNumber = Math.floor(Math.random() * (max - min) + min);
-    message.channel.send("U R NOW " + randomNumber + "% MORE GAY", {
+    message.reply("U R NOW " + randomNumber + "% MORE GAY", {
       files: [
         "https://some-random-api.ml/canvas/gay?avatar=" +
           message.author.displayAvatarURL({ format: "png" }),
