@@ -23,10 +23,9 @@ module.exports = {
   execute(message, args) {
     const fetch = require("node-fetch");
     fetch("https://some-random-api.ml/canvas/gay?avatar="+ message.author.displayAvatarURL({format: 'png'}))
-      .then((res) => res.json())
-      .then((json) => {
-        console.log(json);
-        message.channel.send(json.link);
+      .then((res) => {
+        console.log(res);
+        message.channel.send(res);
       });
   },
 };
