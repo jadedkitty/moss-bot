@@ -21,12 +21,15 @@ module.exports = {
    */
 
   execute(message, args) {
-    const fetch = require("node-fetch");
-    fetch("https://some-random-api.ml/canvas/gay?avatar="+ message.author.displayAvatarURL({format: 'png'}))
-      .then((res) => {
-        console.log(res);
-        var randomNumber = Math.random() * (100 - 1) + 1;
-        message.channel.send("U R NOW " + randomNumber + "% MORE GAY", {files: [res]});
-      });
+    console.log(res);
+    min = Math.ceil(1);
+    max = Math.floor(100);
+    var randomNumber = Math.floor(Math.random() * (max - min) + min);
+    message.channel.send("U R NOW " + randomNumber + "% MORE GAY", {
+      files: [
+        "https://some-random-api.ml/canvas/gay?avatar=" +
+          message.author.displayAvatarURL({ format: "png" }),
+      ],
+    });
   },
 };
