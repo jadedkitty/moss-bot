@@ -25,7 +25,8 @@ module.exports = {
     fetch("https://some-random-api.ml/canvas/gay?avatar="+ message.author.displayAvatarURL({format: 'png'}))
       .then((res) => {
         console.log(res);
-        message.channel.send(res);
+        var randomNumber = Math.random() * (100 - 1) + 1;
+        message.channel.send("U R NOW " + randomNumber + "% MORE GAY", {files: [res]});
       });
   },
 };
