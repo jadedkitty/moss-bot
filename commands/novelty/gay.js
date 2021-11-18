@@ -21,7 +21,6 @@ module.exports = {
    */
 
   execute(message, args) {
-    console.log(res);
     min = Math.ceil(1);
     max = Math.floor(100);
     var randomNumber = Math.floor(Math.random() * (max - min) + min);
