@@ -45,7 +45,14 @@ module.exports = {
           message.channel.send({ content: "HERE'S A HUG!!!! *hugs*" });
         }, 2000);
         // custom message if "mommy" 
-      } else {
+      } 
+      else if(args.includes("mommy")) {
+        setTimeout(() => {
+          message.channel.send({ content: "We love you mommy <3 " + args + "HERE'S A HUG!!!! *hugs*" });
+        }, 2000);
+
+      }
+      else {
         message.channel.send({ content: "*" + move + " " + args + "*" });
         setTimeout(() => {
           message.channel.send({ content: "HERE'S A HUG!!!! *hugs*" });
