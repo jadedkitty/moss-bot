@@ -44,6 +44,7 @@ module.exports = {
         setTimeout(() => {
           message.channel.send({ content: "HERE'S A HUG!!!! *hugs*" });
         }, 2000);
+        // custom message if "mommy" 
       } else {
         message.channel.send({ content: "*" + move + " " + args + "*" });
         setTimeout(() => {
