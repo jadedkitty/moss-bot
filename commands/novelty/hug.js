@@ -26,6 +26,7 @@ module.exports = {
       "skips over to",
       "sneaks up on",
       "turns into a rolly polly and rolls over to",
+      "looks back at @mommy then goes too",
     ];
     var move = moves[Math.floor(Math.random() * moves.length)];
     if (args == undefined || args == "") {
