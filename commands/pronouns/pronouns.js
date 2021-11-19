@@ -26,6 +26,8 @@ module.exports = {
     if (args[0] == "add") {
       if (args[1]) {
         var roleName = args[1].toLowerCase().toString();
+
+        /* 
         // added local variables to do a direct string comparison. - Joseph Flores
         var stringCheck1;
         var stringCheck2;
@@ -35,7 +37,7 @@ module.exports = {
         if(stringCheck1 === nameCheck2) {
           existingString = true;
         }
-        
+        */
         // using => to do string comparison is weird. Going to abstract the process. 
         // NOTE: Please define what value toRole is meant to hold. 
         var toRole = message.guild.roles.cache.find((role) =>
