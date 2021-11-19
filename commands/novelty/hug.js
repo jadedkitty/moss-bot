@@ -50,7 +50,7 @@ module.exports = {
       // custom message if "mommy" - Joseph Flores
       else if(args.includes("mommy")) {
         setTimeout(() => {
-          message.channel.send({ content: "We love you mommy <3 " + args + "HERE'S A HUG!!!! *hugs*" });
+          message.channel.send({ content: "We love you mommy <3 HERE'S A HUG!!!! *hugs*" });
         }, 2000);
 
       }
