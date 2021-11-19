@@ -27,7 +27,7 @@ module.exports = {
       if (args[1]) {
         var roleName = args[1].toLowerCase().toString();
         var toRole = message.guild.roles.cache.find((role) =>
-          role.name.toLowerCase().includes(args[1].toLowerCase())
+          role.name.toLowerCase().localeCompare(args[1].toLowerCase())
         );
         if (toRole) {
           if (message.member.roles.cache.has(toRole.id)) {
@@ -63,7 +63,7 @@ module.exports = {
       console.log(args[1].toLowerCase());
       if (args[1]) {
         var toRole = message.guild.roles.cache.find((role) =>
-          role.name.toLowerCase().includes(args[1].toLowerCase())
+          role.name.toLowerCase().localeCompare(args[1].toLowerCase())
         );
         if (toRole) {
           if (message.member.roles.cache.has(toRole.id)) {
