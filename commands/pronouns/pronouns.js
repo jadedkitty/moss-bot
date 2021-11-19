@@ -38,10 +38,9 @@ module.exports = {
           existingString = true;
         }
         */
-        // using => to do string comparison is weird. Going to abstract the process. 
-        // NOTE: Please define what value toRole is meant to hold. 
+        // toRole is a JS object.
         var toRole = message.guild.roles.cache.find((role) =>
-          role.name.toLowerCase().localeCompare(args[1].toLowerCase())
+          role.name.toLowerCase().localCompare(args[1].toLowerCase())
           
         );
         // start if statement if toRole exists
