@@ -35,8 +35,9 @@ module.exports = {
       !args[0].includes("@") &&
       !args.includes("Me") &&
       !args.includes("me") &&
-      !args.includes("mommy")
-      
+      !args.includes("mommy") && 
+      !args.includes("daddy")
+
     ) {
       message.reply({ content: "i don't know who that is :(" });
     } else {
@@ -50,9 +51,16 @@ module.exports = {
       // custom message if "mommy" - Joseph Flores
       else if(args.includes("mommy")) {
         setTimeout(() => {
-          message.channel.send({ content: "We love you mommy <3 HERE'S A HUG!!!! *hugs*" });
-        }, 2000);
+          message.channel.send({ content: "We love you mommy <3 HERE'S A HUG!!!! ヾ(≧ ▽ ≦)ゝ *hugs*" });
+        }, 1000);
+      }
 
+      // custom message if "daddy" - Joseph Flores
+      else if(args.includes("daddy")) {
+        setTimeout(() => {
+        message.channel.send({ content: "Raccoons get love too o((>ω< ))o *hugs*" });
+        }, 1000);
+      
       }
       else {
         message.channel.send({ content: "*" + move + " " + args + "*" });
