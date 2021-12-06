@@ -27,22 +27,9 @@ module.exports = {
       if (args[1]) {
         var roleName = args[1].toLowerCase().toString();
 
-        /* 
-        // added local variables to do a direct string comparison. - Joseph Flores
-        var stringCheck1;
-        var stringCheck2;
-        let existingString = false;
-        stringCheck1 = message.guild.roles.cache.find((role));
-        stringCheck2 = args[1].toLowerCase();
-        if(stringCheck1 === nameCheck2) {
-          existingString = true;
-        }
-        */
         // toRole is a JS object.
-        var toRole = message.guild.roles.cache.find((role) =>
-          role.name.toLowerCase().localeCompare(args[1].toLowerCase())
-          
-        );
+        var toRole = message.guild.roles.cache.find(role => role.name === roleName);
+
         // start if statement if toRole exists
         if (toRole) {
           if (message.member.roles.cache.has(toRole.id)) {
