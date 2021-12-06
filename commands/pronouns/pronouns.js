@@ -1,7 +1,7 @@
 /**
  * @file Pronoun command
  * @author Emma Maguire
- * @since 1.0.0
+ * @since 1.0
  */
 
 module.exports = {
@@ -17,7 +17,7 @@ module.exports = {
 
   /**
    * @description Executes when the command is called by command handler.
-   * @author Naman Vrati
+   * @author Emma Maguire
    * @param {Object} message The Message Object of the command.
    * @param {String[]} args The Message Content of the received message seperated by spaces (' ') in an array, this excludes prefix and command/alias itself.
    */
