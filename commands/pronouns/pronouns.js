@@ -64,9 +64,12 @@ module.exports = {
     if (args[0] == "remove") {
       console.log(args[1].toLowerCase());
       if (args[1]) {
-        var toRole = message.guild.roles.cache.find((role) =>
-          role.name.toLowerCase().localeCompare(args[1].toLowerCase())
-        );
+
+var roleName = args[1].toLowerCase().toString();
+
+        // toRole is a JS object.
+        var toRole = message.guild.roles.cache.find(role => role.name === roleName);
+
         if (toRole) {
           if (message.member.roles.cache.has(toRole.id)) {
             message.member.roles.remove(toRole).catch(console.error);
