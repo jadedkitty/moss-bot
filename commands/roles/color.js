@@ -1,11 +1,11 @@
 /**
- * @file Pronoun command
+ * @file Color roles command
  * @author Emma Maguire
  * @since 1.0.0
  */
 
 module.exports = {
-  name: "pronouns",
+  name: "color",
   description: "Adds/sets the pronouns role for the sender",
   args: true,
 
@@ -14,6 +14,7 @@ module.exports = {
   usage: "add/remove <pronouns>",
   //permissions: 'SEND_MESSAGES',
   guildOnly: true,
+adminOnly: true,
 
   /**
    * @description Executes when the command is called by command handler.
