@@ -62,6 +62,14 @@ module.exports = {
         }, 1000);
       
       }
+      // custom message if "Hannah" - Joseph Flores
+      else if(args.includes("Hannah")) {
+        setTimeout(() => {
+        message.channel.send({ content: "(while shaking shoulders)Hannah Hannah~ Hannah- Banana~ *hugs* " });
+        }, 1000);
+      
+      }
+      
       else {
         message.channel.send({ content: "*" + move + " " + args + "*" });
         setTimeout(() => {
