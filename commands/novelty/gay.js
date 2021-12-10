@@ -24,20 +24,11 @@ module.exports = {
     min = Math.ceil(1);
     max = Math.floor(100);
     var randomNumber = Math.floor(Math.random() * (max - min) + min);
-    if (!args) {
-      message.reply(
+    message.reply(
         "U R NOW " +
           randomNumber +
           "% MORE GAY https://some-random-api.ml/canvas/gay?avatar=" +
           message.author.displayAvatarURL({ format: "jpg" })
       );
-    } else {
-      message.reply(
-        "U R NOW " +
-          randomNumber +
-          "% MORE GAY https://some-random-api.ml/canvas/gay?avatar=" +
-          message.args.displayAvatarURL({ format: "jpg" })
-      );
-    }
   },
 };
