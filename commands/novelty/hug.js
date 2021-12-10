@@ -36,7 +36,8 @@ module.exports = {
       !args.includes("Me") &&
       !args.includes("me") &&
       !args.includes("mommy") && 
-      !args.includes("daddy")
+      !args.includes("daddy") && 
+      !args.includes("Hannah")
 
     ) {
       message.reply({ content: "i don't know who that is :(" });
