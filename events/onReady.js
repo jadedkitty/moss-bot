@@ -1,7 +1,7 @@
 /**
  * @file Ready Event File.
- * @author Naman Vrati
- * @since 1.0.0
+ * @author Emma Maguire
+ * @since 1.0.1
  */
 
 module.exports = {
@@ -14,6 +14,6 @@ module.exports = {
 	 */
 	execute(client) {
 		console.log(`Ready! Logged in as ${client.user.tag}`);
-    	client.user.setActivity('!help', { type: 'PLAYING' })
+    	client.user.setActivity('!help and !pronouns', { type: 'PLAYING' })
 	},
 };
