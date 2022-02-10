@@ -10,7 +10,7 @@ module.exports = {
   args: true,
 
   /** You need to uncomment below properties if you need them. */
-  description: 'Adds pronouns for user',
+  description: "Adds pronouns for user",
   usage: "add/remove <pronouns>",
   //permissions: 'SEND_MESSAGES',
   guildOnly: true,
@@ -28,7 +28,9 @@ module.exports = {
         var roleName = args[1].toLowerCase().toString();
 
         // toRole is a JS object.
-        var toRole = message.guild.roles.cache.find(role => role.name === roleName);
+        var toRole = message.guild.roles.cache.find(
+          (role) => role.name === roleName
+        );
 
         // start if statement if toRole exists
         if (toRole) {
@@ -64,11 +66,12 @@ module.exports = {
     if (args[0] == "remove") {
       console.log(args[1].toLowerCase());
       if (args[1]) {
-
-var roleName = args[1].toLowerCase().toString();
+        var roleName = args[1].toLowerCase().toString();
 
         // toRole is a JS object.
-        var toRole = message.guild.roles.cache.find(role => role.name === roleName);
+        var toRole = message.guild.roles.cache.find(
+          (role) => role.name === roleName
+        );
 
         if (toRole) {
           if (message.member.roles.cache.has(toRole.id)) {
