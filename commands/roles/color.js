@@ -9,11 +9,11 @@ var reg = /^#([0-9a-f]{3}){1,2}$/i;
 
 module.exports = {
   name: "color",
-  description: "Adds/sets a color role for the sender",
+  description: "Sets or clears color roles for the sender",
   args: true,
 
   /** You need to uncomment below properties if you need them. */
-  usage: "<#AABBCC/none>",
+  usage: "<#AABBCC> or clear",
   //permissions: 'SEND_MESSAGES',
   guildOnly: true,
   adminOnly: false,
@@ -26,14 +26,13 @@ module.exports = {
    */
 
   execute(message, args) {
-    var hexColor = args[0].toUpperCase();
-    var colorNames = namer(hexColor).ntc;
-    var colorName = colorNames[0].name;
-    var toRole = message.guild.roles.cache.find(
-      (role) => role.name === "Color-" + colorName
-      // #259f1f
-    );
     if (reg.test(args[0]) == true) {
+      var hexColor = args[0].toUpperCase();
+      var colorNames = namer(hexColor).ntc;
+      var colorName = colorNames[0].name;
+      var toRole = message.guild.roles.cache.find(
+        (role) => role.name === "Color-" + colorName
+      );
       if (toRole) {
         if (message.member.roles.cache.has(toRole.id)) {
           message.reply("You are already " + toRole.name + "!");
@@ -55,22 +54,21 @@ module.exports = {
             message.reply("You are now " + role.name + "!");
           });
       }
-    } else if (args[0] != "none") {
+    } else if (args[0] !== "clear") {
       message.reply(args[0] + " is not a valid color");
+    } else if (args[0] == "clear") {
+      var toRole = message.member.roles.cache
+        .filter((roles) => roles.name.includes("Color-"))
+        .map((role) => role.name);
+      toRole.forEach(function (item) {
+        var colorRole = message.guild.roles.cache.find(
+          (role) => role.name === item
+        );
+        message.member.roles.remove(colorRole).catch(console.error);
+            message.reply(
+              "You are no longer `" + colorRole.name + "`!"
+            );
+      });
     }
-    // else if ((args[0] = "none")) {
-    //   if (toRole) {
-    //     if (message.member.roles.cache.has(toRole.id)) {
-    //       message.member.roles.remove(toRole).catch(console.error);
-    //       message.reply(
-    //         "`" + toRole.name + "` has been removed from your pronouns!"
-    //       );
-    //     } else {
-    //       message.reply("You don't have the role `" + toRole.name + "`!");
-    //     }
-    //   } else {
-    //     message.reply("That role doesn't exist!");
-    //   }
-    // }
   },
 };
