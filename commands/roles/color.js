@@ -13,7 +13,7 @@ module.exports = {
   args: true,
 
   /** You need to uncomment below properties if you need them. */
-  usage: "<#AABBCC> or remove",
+  usage: "<#AABBCC> or remove`\n**Color Finder** \`https://chir.ag/projects/name-that-color/",
   //permissions: 'SEND_MESSAGES',
   guildOnly: true,
   adminOnly: false,
