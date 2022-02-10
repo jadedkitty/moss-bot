@@ -27,7 +27,7 @@ module.exports = {
 
   execute(message, args) {
     var hexColor = args[0].toUpperCase();
-    var colorNames = namer(hexColor).pantone;
+    var colorNames = namer(hexColor).ntc;
     var colorName = colorNames[0].name;
     var toRole = message.guild.roles.cache.find(
       (role) => role.name === "Color-" + colorName
@@ -56,7 +56,7 @@ module.exports = {
       }
     } else if (args[0] != "none") {
       message.reply(args[0] + " is not a valid color");
-    } 
+    }
     // else if ((args[0] = "none")) {
     //   if (toRole) {
     //     if (message.member.roles.cache.has(toRole.id)) {
