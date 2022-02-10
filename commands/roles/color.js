@@ -9,11 +9,11 @@ var reg = /^#([0-9a-f]{3}){1,2}$/i;
 
 module.exports = {
   name: "color",
-  description: "Sets or clears color roles for the sender",
+  description: "Sets or removes color roles for the sender",
   args: true,
 
   /** You need to uncomment below properties if you need them. */
-  usage: "<#AABBCC> or clear",
+  usage: "`<#AABBCC>` or `remove`",
   //permissions: 'SEND_MESSAGES',
   guildOnly: true,
   adminOnly: false,
@@ -55,10 +55,10 @@ module.exports = {
             message.reply("You are now " + colorName + "!");
           });
       }
-    } else if (args[0] !== "clear") {
+    } else if (args[0] !== "remove") {
       message.reply(args[0] + " is not a valid color");
-    } else if (args[0] == "clear") {
-      clearColors(message, "clear");
+    } else if (args[0] == "remove") {
+      clearColors(message, "remove");
     }
   },
 };
@@ -72,7 +72,7 @@ function clearColors(message, src) {
       (role) => role.name === item
     );
     message.member.roles.remove(colorRole).catch(console.error);
-    if ((src === "clear")) {
+    if ((src === "remove")) {
       message.reply("You are no longer `" + colorRole.name + "`!");
     }
   });
