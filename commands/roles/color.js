@@ -13,7 +13,7 @@ module.exports = {
   args: true,
 
   /** You need to uncomment below properties if you need them. */
-  usage: "`<#AABBCC>` or `remove`",
+  usage: "<#AABBCC> or remove",
   //permissions: 'SEND_MESSAGES',
   guildOnly: true,
   adminOnly: false,
@@ -39,7 +39,7 @@ module.exports = {
         } else {
           clearColors(message, "new");
           message.member.roles.add(toRole).catch(console.error);
-          message.reply("You are now " + colorName + "!");
+          message.reply("You are now `" + colorName + "`!");
         }
       } else {
         console.log(colorName);
@@ -53,7 +53,7 @@ module.exports = {
           .then((role) => {
             clearColors(message, "new");
             message.member.roles.add(role);
-            message.reply("You are now " + colorName + "!");
+            message.reply("You are now `" + colorName + "`!");
           });
       }
     } else if (args[0] !== "remove") {
