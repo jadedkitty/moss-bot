@@ -37,8 +37,9 @@ module.exports = {
         if (message.member.roles.cache.has(toRole.id)) {
           message.reply("You are already " + toRole.name + "!");
         } else {
+          clearColors(message, 'new');
           message.member.roles.add(toRole).catch(console.error);
-          message.reply("You are now " + toRole.name + "!");
+          message.reply("You are now " + colorName + "!");
         }
       } else {
         console.log(colorName);
@@ -51,24 +52,28 @@ module.exports = {
           .catch(console.error)
           .then((role) => {
             message.member.roles.add(role);
-            message.reply("You are now " + role.name + "!");
+            message.reply("You are now " + colorName + "!");
           });
       }
     } else if (args[0] !== "clear") {
       message.reply(args[0] + " is not a valid color");
     } else if (args[0] == "clear") {
-      var toRole = message.member.roles.cache
-        .filter((roles) => roles.name.includes("Color-"))
-        .map((role) => role.name);
-      toRole.forEach(function (item) {
-        var colorRole = message.guild.roles.cache.find(
-          (role) => role.name === item
-        );
-        message.member.roles.remove(colorRole).catch(console.error);
-            message.reply(
-              "You are no longer `" + colorRole.name + "`!"
-            );
-      });
+      clearColors(message, "clear");
     }
   },
 };
+
+function clearColors(message, src) {
+  var toRole = message.member.roles.cache
+    .filter((roles) => roles.name.includes("Color-"))
+    .map((role) => role.name);
+  toRole.forEach(function (item) {
+    var colorRole = message.guild.roles.cache.find(
+      (role) => role.name === item
+    );
+    message.member.roles.remove(colorRole).catch(console.error);
+    if ((src === "clear")) {
+      message.reply("You are no longer `" + colorRole.name + "`!");
+    }
+  });
+}
