@@ -37,7 +37,7 @@ module.exports = {
         if (message.member.roles.cache.has(toRole.id)) {
           message.reply("You are already " + toRole.name + "!");
         } else {
-          clearColors(message, 'new');
+          clearColors(message, "new");
           message.member.roles.add(toRole).catch(console.error);
           message.reply("You are now " + colorName + "!");
         }
@@ -51,6 +51,7 @@ module.exports = {
           })
           .catch(console.error)
           .then((role) => {
+            clearColors(message, "new");
             message.member.roles.add(role);
             message.reply("You are now " + colorName + "!");
           });
@@ -72,7 +73,7 @@ function clearColors(message, src) {
       (role) => role.name === item
     );
     message.member.roles.remove(colorRole).catch(console.error);
-    if ((src === "remove")) {
+    if (src === "remove") {
       message.reply("You are no longer `" + colorRole.name + "`!");
     }
   });
