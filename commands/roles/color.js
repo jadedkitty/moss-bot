@@ -31,6 +31,7 @@ module.exports = {
     var colorName = colorNames[0].name;
     var toRole = message.guild.roles.cache.find(
       (role) => role.name === "Color-" + colorName
+      // #259f1f
     );
     if (reg.test(args[0]) == true) {
       if (toRole) {

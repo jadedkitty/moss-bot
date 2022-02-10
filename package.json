@@ -1,6 +1,6 @@
 {
 	"name": "moss-bot",
-	"version": "0.0.1",
+	"version": "3.0",
 	"description": "A custom Discord bot used for jadedkitty's servers!",
 	"engines": {
 		"node": "16.x"
